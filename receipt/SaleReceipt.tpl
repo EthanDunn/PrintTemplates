@@ -1102,11 +1102,11 @@ table.payments td.label {
 	{% if Payment.CCCharge %}
 		{% if Sale.Shop.ReceiptSetup.creditcardAgree|strlen > 0 %}
 			<p>{{Sale.Shop.ReceiptSetup.creditcardAgree|noteformat|raw}}</p>
-		{% endif %}
+		{% endif %} 
 		<dl id="signatureSection" class="signature">
-			<dt>Signature:</dt>
+			<dt>Signature:</dt> 
 			<dd>
-				{{Payment.CCCharge.cardholderName}}<br />
+				<p>{{Payment.CCCharge.cardholderName}}</p>
 			</dd>
 		</dl>
 	{% endif %}
